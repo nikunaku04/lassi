@@ -1,0 +1,21 @@
+<h2 style="background-color:white;">Minun ohjelmoimis sankarit</h2>
+<div class="yeetus">
+    <label style="background-color:white;">Supersankari:
+        <input #heroName />
+    </label>
+    <label style="background-color:white;">Supervoima:
+        <input #heroSuperpower />
+    </label>
+    <!-- (click) passes input value to add() and then clears the input -->
+    <button (click)="add(heroName.value, heroSuperpower .value); heroName.value=''; heroSuperpower.value = ''">
+        Lisää
+    </button>
+</div>
+<ul class="heroes">
+    <li *ngFor="let hero of heroes">
+        <a routerLink="/detail/{{hero.id}}">
+            <span class="badge">{{hero.id}}</span> {{hero.name}}
+        </a>
+        <button class="delete" title="delete hero" (click)="delete(hero)">x</button>
+    </li>
+</ul>

@@ -1,0 +1,20 @@
+<div *ngIf="hero">
+
+    <div class="detaljo">
+        <h2 style="background-color:white;">{{hero.name | uppercase}}:n Lisätiedot</h2>
+    </div>
+    <div class="station" style="background-color:white;"><span style="background-color:white;">Asemanumero:
+        </span>{{hero.id}}</div>
+    <div class="puskanpatkija">
+        <label>Nimi:
+            <input [(ngModel)]="hero.name" placeholder="name" />
+        </label>
+        <label>Supervoima:
+            <input [(ngModel)]="hero.superpower" placeholder="superpower" />
+        </label>
+    </div>
+    <div class="returno">
+        <button (click)="goBack()">Palaa Takaisin</button>
+        <button (click)="save()">Tallenna</button>
+    </div>
+</div>

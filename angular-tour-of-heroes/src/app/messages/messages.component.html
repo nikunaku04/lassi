@@ -1,0 +1,8 @@
+<div *ngIf="messageService.messages.length">
+    <div class="hahah">
+        <h2 style="background-color:white;">NYT TAKAISIN TYÖNTEKOON!</h2>
+    </div>
+    <button class="clear" (click)="messageService.clear()">Poista viesti</button>
+    <div *ngFor='let message of messageService.messages'> {{yeet}} </div>
+
+</div>
