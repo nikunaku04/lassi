@@ -80,8 +80,27 @@ h1 {
       color: #039be5;
     }
     html {
-      background-image: url(C:\Users\lassi.ahva\Desktop\angular-tour-of-heroes\src\assets\yeetus.jpg);
-      background-size: cover;
+    background: linear-gradient(146deg, #2bc69e, #74c62b, #c6aa2b, #c62b2b, #382bc6, #c62bb7, #c62b6b);
+    background-size: 1400% 1400%;
+    
+    -webkit-animation: jojo 30s ease infinite;
+    -moz-animation: jojo 30s ease infinite;
+    animation: jojo 30s ease infinite;
+    }
+    @-webkit-keyframes jojo {
+        0%{background-position:0% 50%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 50%}
+    }
+    @-moz-keyframes jojo {
+        0%{background-position:0% 50%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 50%}
+    }
+    @keyframes jojo {
+        0%{background-position:0% 50%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 50%}
     }
     .yeetus {
       display: block;

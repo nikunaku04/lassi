@@ -6,15 +6,16 @@
     <div class="station" style="background-color:white;"><span style="background-color:white;">Asemanumero:
         </span>{{hero.id}}</div>
     <div class="puskanpatkija">
-        <label>Nimi:
-            <input [(ngModel)]="hero.name" placeholder="name" />
+        <label>Nimi: <span [hidden]="!isHidden">{{hero.name}} </span>
+            <div [hidden]="isHidden"><input [(ngModel)]="hero.name" placeholder="name" /></div>
         </label>
-        <label>Supervoima:
-            <input [(ngModel)]="hero.superpower" placeholder="superpower" />
+        <label>Supervoima: <span [hidden]="!isHidden">{{hero.superpower}} </span>
+            <div [hidden]="isHidden"><input [(ngModel)]="hero.superpower" placeholder="superpower" /></div>
         </label>
     </div>
     <div class="returno">
         <button (click)="goBack()">Palaa Takaisin</button>
         <button (click)="save()">Tallenna</button>
+        <button (click)="toggleDisplay()">Muokkaa</button>
     </div>
 </div>

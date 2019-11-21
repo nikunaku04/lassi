@@ -12,6 +12,11 @@ import { HeroService } from '../hero.service';
 })
 export class HeroDetailComponent implements OnInit {
   hero: Hero;
+  isHidden = true;
+
+  toggleDisplay() {
+    this.isHidden = !this.isHidden;
+  }
 
   constructor(
     private route: ActivatedRoute,
